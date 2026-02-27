@@ -19,15 +19,13 @@ This assignment focuses on running ORB-SLAM3 monocular SLAM on the HKisland_GNSS
 ### 4.1 Start ROS Core
 ```bash
 roscore &  # Run in background to avoid terminal occupation
-4.2 Play ROS Bag (Topic Remapping)
+### 4.2 Play ROS Bag
 ```bash
-# --pause: Pause at start (press Space to play); Remap topic to match ORB-SLAM3 subscription
 rosbag play --pause ./data/HKisland_GNSS03.bag /left_camera/image/compressed:=/camera/image_raw/compressed
-4.3 Launch ORB-SLAM3 Monocular Node
+### 4.3 Launch ORB-SLAM3 Monocular Node
 ```bash
-# Redirect runtime log to run_log.txt (avoid excessive terminal output)
 rosrun ORB_SLAM3 MonoCompressed Vocabulary/ORBvoc.txt Examples/Monocular/HKisland_Mono.yaml > run_log.txt 2>&1
-4.4 Execute SLAM Process
-Press Space in the bag playback terminal to start data streaming;
-Check the Pangolin visualization window to confirm trajectory/feature points are displayed normally;
-Wait for bag playback completion (trajectory file is generated automatically).
+###4.4 Execute SLAM Process
+- **1.Press Space in the bag playback terminal to start data streaming;
+- **2.Check the Pangolin visualization window to confirm trajectory/feature points are displayed normally;
+- **3.Wait for bag playback completion (trajectory file is generated automatically).
