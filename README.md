@@ -34,7 +34,7 @@ rosrun ORB_SLAM3 MonoCompressed Vocabulary/ORBvoc.txt Examples/Monocular/HKislan
 3.Wait for bag playback completion (trajectory file auto-generated).
 
 ## 5. Results
-### 5.1 File Submission List (文件补充清单)
+### 5.1 File Submission List 
 | 文件路径 | 必须/可选 | 补充说明 |
 |----------|-----------|----------|
 | `groung——truth——HKisland03.txt` | 必须 | ORB-SLAM3完整运行日志（无ERROR/FATAL级报错），需上传到仓库根目录 |
@@ -46,8 +46,8 @@ rosrun ORB_SLAM3 MonoCompressed Vocabulary/ORBvoc.txt Examples/Monocular/HKislan
 ---
 
 ### 5.2 Visualization Screenshot
-![SLAM Visualization Screenshot](imgs/slam_visualization.png)
-*【需补充：填写截图说明，例如 "Pangolin窗口展示HKisland场景下ORB-SLAM3的运行轨迹和特征点分布"】*
+<img width="2510" height="1679" alt="SLAM_Visualization_Screenshot" src="https://github.com/user-attachments/assets/c466e6d0-dcc1-4d0a-8e15-b262c1bb92bb" />
+
 
 ---
 
