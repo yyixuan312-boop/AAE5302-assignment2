@@ -19,7 +19,7 @@ This assignment focuses on running ORB-SLAM3 monocular SLAM on the HKisland_GNSS
 ### 4.1 Start ROS Core
 ```bash
 roscore &
-### 4.2 Play ROS Bag (Topic Remapping)
+### 4.2 Play ROS Bag 
 ```bash
 # --pause: Pause at start (press Space to play); Remap topic to match ORB-SLAM3 subscription
 rosbag play --pause ./data/HKisland_GNSS03.bag /left_camera/image/compressed:=/camera/image_raw/compressed
