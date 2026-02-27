@@ -19,4 +19,5 @@ This assignment focuses on running ORB-SLAM3 monocular SLAM on the HKisland_GNSS
 ### 4.1 Start ROS Core
 ```bash
 roscore & 
-### 4.1 Start ROS Core
+
+### 4.2 Start ROS Core
