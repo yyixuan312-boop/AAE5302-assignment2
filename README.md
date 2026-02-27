@@ -12,7 +12,7 @@ This assignment focuses on running ORB-SLAM3 monocular SLAM on the HKisland_GNSS
 - **Dataset Name**: HKisland_GNSS03.bag
 - **Source**: HKU MaRS Lab Dataset ([https://mars.hku.hk/dataset.html](https://mars.hku.hk/dataset.html))
 - **Dataset Type**: ROS bag (monocular camera + GNSS data)
-- **Duration**: [需填充 - 填写bag文件时长，如 "390 seconds"，可通过 `rosbag info` 查看]
+- **Duration**: 390 seconds
 - **Key Topics**: `/left_camera/image/compressed` (monocular image), `/gnss/fix` (GNSS pose)
 
 ## 4. Running Steps
