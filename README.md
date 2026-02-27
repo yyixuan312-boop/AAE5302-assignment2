@@ -1,4 +1,4 @@
-# AAE5303 Assignment 2: ORB-SLAM3 with HKisland GNSS03 Dataset
+# AAE5303 Assignment 2: Cursor adaptation and practice for the orbSLAM3  demo to show the performance 
 
 ## 1. Assignment Overview 
 This assignment focuses on running ORB-SLAM3 monocular SLAM on the HKisland_GNSS03 dataset, generating trajectory results, and evaluating SLAM performance.  
