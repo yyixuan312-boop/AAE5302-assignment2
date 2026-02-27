@@ -51,7 +51,7 @@ rosrun ORB_SLAM3 MonoCompressed Vocabulary/ORBvoc.txt Examples/Monocular/HKislan
 
 ---
 
-### 5.3 Evaluation Metrics (if applicable)
+### 5.3 Evaluation Metrics 
 | Metric | Value | Note |
 |--------|-------|------|
 | Absolute Trajectory Error (ATE) | 【需补充：填写ATE数值，例如 "0.85m"（无评估则删除此行）】 | 【需补充：填写评估说明，例如 "基于GNSS真值评估"（无评估则删除此行）】 |
