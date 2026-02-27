@@ -51,8 +51,10 @@ rosrun ORB_SLAM3 MonoCompressed Vocabulary/ORBvoc.txt Examples/Monocular/HKislan
 
 ---
 
-### 5.3 Evaluation Metrics 
+### 5.3 Evaluation Metrics (if applicable)
 | Metric | Value | Note |
 |--------|-------|------|
-| Absolute Trajectory Error (ATE) | 【需补充：填写ATE数值，例如 "0.85m"（无评估则删除此行）】 | 【需补充：填写评估说明，例如 "基于GNSS真值评估"（无评估则删除此行）】 |
-| Relative Pose Error (RPE) | 【需补充：填写RPE数值，例如 "0.12m"（无评估则删除此行）】 | 【需补充：填写补充说明，例如 "窗口大小：10帧"（无评估则删除此行）】 |
+| Absolute Trajectory Error (ATE) - RMSE | 【需补充：填写ATE RMSE数值，例如 "0.85m"（无评估则删除此行）】 | 【需补充：填写评估说明，例如 "基于evo_ape tum计算，--t_max_diff 0.1s"（无评估则删除此行）】 |
+| RPE Translation Drift (平移漂移率) | 【需补充：填写数值，例如 "0.012 m/m"（无评估则删除此行）】 | 【需补充：填写说明，例如 "基于10m窗口evo_rpe计算，RPE_trans_mean/10"（无评估则删除此行）】 |
+| RPE Rotation Drift (旋转漂移率) | 【需补充：填写数值，例如 "1.5 °/100m"（无评估则删除此行）】 | 【需补充：填写说明，例如 "基于10m窗口evo_rpe计算，(RPE_rot_mean/10)*100"（无评估则删除此行）】 |
+| Completeness (完整性) | 【需补充：填写百分比，例如 "92.5%"（无评估则删除此行）】 | 【需补充：填写说明，例如 "matched_poses/gt_poses*100，匹配姿态数/真值姿态数"（无评估则删除此行）】 |
