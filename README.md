@@ -1,4 +1,4 @@
-# AAE5303 Assignment 2: ORB-SLAM3 with HKisland GNSS Dataset
+# AAE5303 Assignment 2: ORB-SLAM3 with HKisland GNSS03 Dataset
 
 ## 1. Assignment Overview 
 This assignment focuses on running ORB-SLAM3 monocular SLAM on the HKisland_GNSS03 dataset, generating trajectory results, and evaluating SLAM performance.  
@@ -32,3 +32,27 @@ rosrun ORB_SLAM3 MonoCompressed Vocabulary/ORBvoc.txt Examples/Monocular/HKislan
 1.Press Space in the bag playback terminal to start data streaming.  
 2.Check the Pangolin visualization window for normal trajectory display.  
 3.Wait for bag playback completion (trajectory file auto-generated).
+
+## 5. Results
+### 5.1 File Submission List (文件补充清单)
+| 文件路径 | 必须/可选 | 补充说明 |
+|----------|-----------|----------|
+| `run_log.txt` | 必须 | ORB-SLAM3完整运行日志（无ERROR/FATAL级报错），需上传到仓库根目录 |
+| `KeyFrameTrajectory_HKisland.txt` | 必须 | ORB-SLAM3生成的关键帧轨迹文件，需上传到仓库根目录（重命名为该名称） |
+| `imgs/slam_visualization.png` | 必须 | Pangolin可视化窗口截图（需包含SLAM轨迹+特征点+终端运行状态），需上传到仓库`imgs`文件夹 |
+| `results/evaluation_result.txt` | 可选 | ATE/RPE轨迹评估结果（作业要求评估则补充），需上传到仓库`results`文件夹 |
+| `run_assignment2.sh` | 可选 | 一键运行脚本（包含roscore、播放bag、启动SLAM的命令），需上传到仓库根目录 |
+
+---
+
+### 5.2 Visualization Screenshot
+![SLAM Visualization Screenshot](imgs/slam_visualization.png)
+*【需补充：填写截图说明，例如 "Pangolin窗口展示HKisland场景下ORB-SLAM3的运行轨迹和特征点分布"】*
+
+---
+
+### 5.3 Evaluation Metrics (if applicable)
+| Metric | Value | Note |
+|--------|-------|------|
+| Absolute Trajectory Error (ATE) | 【需补充：填写ATE数值，例如 "0.85m"（无评估则删除此行）】 | 【需补充：填写评估说明，例如 "基于GNSS真值评估"（无评估则删除此行）】 |
+| Relative Pose Error (RPE) | 【需补充：填写RPE数值，例如 "0.12m"（无评估则删除此行）】 | 【需补充：填写补充说明，例如 "窗口大小：10帧"（无评估则删除此行）】 |
