@@ -57,4 +57,4 @@ The workflow of the assignment is as follows:
 
 1. Run **ORB-SLAM3** on the HKIsland dataset.
 2. Generate the estimated trajectory:
-   
+  [CameraTrajectory.txt](CameraTrajectory.txt) 
