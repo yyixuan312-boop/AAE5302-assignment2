@@ -57,4 +57,27 @@ The workflow of the assignment is as follows:
 
 1. Run **ORB-SLAM3** on the HKIsland dataset.
 2. Generate the estimated trajectory:
-  [CameraTrajectory.txt](CameraTrajectory.txt) 
+[CameraTrajectory.txt](CameraTrajectory.txt) 
+3. Use the provided ground truth trajectory:
+[ground_truth_HKisland.txt](ground_truth_HKisland.txt)
+
+4. Perform trajectory evaluation using trajectory evaluation tools.
+
+5. Generate evaluation results and visualization plots.
+
+---
+
+## Results
+
+The trajectory evaluation results can be found in:
+
+[FINAL_EVALUATION_RESULTS.txt](FINAL_EVALUATION_RESULTS.txt)
+
+These results provide quantitative metrics describing the accuracy of the estimated trajectory compared with the ground truth.
+
+The trajectory comparison visualization is shown below:
+
+![Trajectory Evaluation](trajectory_evaluation_results.png)
+
+---
+
