@@ -1,0 +1,97 @@
+================================================================================
+VISUAL ODOMETRY EVALUATION RESULTS - HKisland_GNSS03
+================================================================================
+
+DATASET:
+- Dataset: HKisland_GNSS03
+- Image resolution: 2448 x 2048 @ 10 Hz
+- Ground-truth poses: 1955
+- Estimated poses: 218
+- Matched poses: 94  (Completeness: 4.81%)
+- Scale correction: 1.9419 (Sim(3) Umeyama)
+
+--------------------------------------------------------------------------------
+METRIC 1: ATE (Absolute Trajectory Error)
+--------------------------------------------------------------------------------
+Command:
+  evo_ape tum ground_truth.txt CameraTrajectory.txt \
+    -va --align --correct_scale --t_max_diff 0.01
+
+Results (translation, Sim(3) Umeyama alignment, meters):
+  max    2.646970
+  mean   1.302242
+  median 1.255847
+  min    0.310236
+  rmse   1.373365
+  sse    177.296372
+  std    0.436231
+
+Interpretation:
+- Global trajectory accuracy: ATE RMSE 1.37 m
+- Suitable for coarse localization; moderate for monocular VO
+
+--------------------------------------------------------------------------------
+METRIC 2: RPE Translation Drift (delta = 10 m)
+--------------------------------------------------------------------------------
+Command:
+  evo_rpe tum ground_truth.txt CameraTrajectory.txt \
+    -va --align --correct_scale -r trans_part -u m -d 10 --t_max_diff 0.01
+
+Parameters:
+- Found 38 pairs with delta 10.0 (m) among 94 poses using consecutive pairs
+
+Results (RPE w.r.t. translation part, meters):
+  max    490.176874
+  mean   40.227066
+  median 24.700547
+  min    14.685541
+  rmse   84.940126
+  sse    274163.353224
+  std    74.810482
+
+Drift rate:
+- Translation drift = mean / 10 = 4.02 m/m
+
+Interpretation:
+- Local translation drift is high; dominated by tracking loss and low completeness
+
+--------------------------------------------------------------------------------
+METRIC 3: RPE Rotation Drift (delta = 10 m)
+--------------------------------------------------------------------------------
+Command:
+  evo_rpe tum ground_truth.txt CameraTrajectory.txt \
+    -va --align --correct_scale -r angle_deg -u m -d 10 --t_max_diff 0.01
+
+Parameters:
+- Found 38 pairs with delta 10.0 (m) among 94 poses using consecutive pairs
+
+Results (RPE w.r.t. rotation angle in degrees):
+  max    173.207819
+  mean   14.783213
+  median 1.108313
+  min    0.061826
+  rmse   36.833380
+  sse    51554.518317
+  std    33.736545
+
+Drift rate:
+- Rotation drift = (mean / 10) * 100 = 147.83 deg/100m
+
+Interpretation:
+- Rotation drift moderate on average but with large outliers
+
+--------------------------------------------------------------------------------
+SUMMARY
+--------------------------------------------------------------------------------
+| Metric              | Value          | Note                          |
+| ATE RMSE            | 1.373 m        | Global accuracy               |
+| RPE Trans Drift     | 4.02 m/m       | delta=10m, mean/10            |
+| RPE Rot Drift       | 147.83 deg/100m| delta=10m, (mean/10)*100      |
+| Completeness        | 4.81%          | 94/1955 matched               |
+| Scale correction    | 1.9419         | Sim(3) Umeyama                |
+
+Main observations:
+- ATE RMSE ~1.37 m: reasonable for monocular VO in outdoor GNSS-evaluated scenario
+- RPE drift high: frequent tracking loss and low completeness (4.81%)
+- Recommend: increase nFeatures, lower FAST threshold, verify camera calibration
+================================================================================
