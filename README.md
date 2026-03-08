@@ -60,4 +60,9 @@ RTK GPS provides centimeter-level positioning accuracy at 5 Hz, with a total of 
 | OS          | Ubuntu 22.04 via WSL2                  |
 
 ### Camera Calibration
-Camera.fx: 1444.43Camera.fy: 1444.34Camera.cx: 1179.58Camera.cy: 1844.98Camera.k1: -0.0560Camera.k2: 0.0000
+Camera.fx: 1444.43
+Camera.fy: 1444.34
+Camera.cx: 1179.58
+CameraC.cy: 1844.98
+Camera.k1: -0.0560
+Camera.k2: 0.0000
