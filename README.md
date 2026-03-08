@@ -10,10 +10,6 @@ This repository contains the implementation and analysis of monocular visual odo
 | RPE Trans Drift | 4.02 m/m        | Translation drift rate (delta=10 m)          |
 | RPE Rot Drift   | 147.83 deg/100m | Rotation drift rate (delta=10 m)            |
 | Completeness    | 4.81%           | Matched poses / total ground-truth poses     |
-| Scale correction| 1.9419          | Sim(3) Umeyama alignment scale factor        |
-| Ground-truth Poses | 1955          | Total poses from RTK GPS                     |
-| Estimated Poses  | 218            | Keyframe poses from ORB-SLAM3                |
-| Matched Poses    | 94             | Poses successfully matched between estimated and ground-truth |
 
 ---
 
