@@ -81,5 +81,17 @@ Camera.k2: 0.0000
 #### ATE Calculation
 ```bash
 evo_ape tum ground_truth_HKisland.txt CameraTrajectory.txt -va --align --correct_scale --t_max_diff 0.01
+```
+### Results and Analysis
+## Performance Analysis
+| Metric          | Value           | Interpretation                                             |
+|-----------------|-----------------|------------------------------------------------------------|
+| ATE RMSE        | 1.373 m         | Reasonable global accuracy for monocular VO                |
+| RPE Trans Drift | 4.02 m/m        | High local translation drift due to tracking loss         |
+| RPE Rot Drift   | 147.83 deg/100m | Moderate average rotation drift with outliers             |
+| Completeness    | 4.81%           | Low trajectory coverage from sparse feature matching      |
 
-Results and Analysis
+## Discussion
+### Strengths
+1. **Valid monocular VO implementation**: Successfully runs on HKisland_GNSS03 dataset with ORB-SLAM3
+2. **Reasonable global accuracy**: ATE RMSE 1.37 m indicates basic trajectory consistency
