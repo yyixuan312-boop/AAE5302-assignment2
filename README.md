@@ -66,3 +66,18 @@ Camera.cx: 1179.58
 CameraC.cy: 1844.98
 Camera.k1: -0.0560
 Camera.k2: 0.0000
+
+### Key Files in Repository
+| File Name                  | Description                                  |
+|----------------------------|----------------------------------------------|
+| `CameraTrajectory.txt`     | Estimated keyframe trajectory (218 poses, TUM format) |
+| `ground_truth_HKisland.txt`| Ground-truth trajectory from RTK GPS (1955 poses, TUM format) |
+| `FINAL_EVALUATION_RESULTS.txt` | Detailed quantitative evaluation report (ATE/RPE statistics) |
+| `HKisland_Mono.yaml`       | Camera calibration and ORB-SLAM3 configuration file |
+
+---
+
+### Evaluation Commands
+#### ATE Calculation
+```bash
+evo_ape tum ground_truth_HKisland.txt CameraTrajectory.txt -va --align --correct_scale --t_max_diff 0.01
